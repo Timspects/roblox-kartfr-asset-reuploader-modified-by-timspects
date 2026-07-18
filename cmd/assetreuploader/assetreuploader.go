@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"log"
 	"strings"
 
 	"github.com/Timspects/roblox-kartfr-asset-reuploader-modified-by-timspects/internal/app/config"
