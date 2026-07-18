@@ -1,0 +1,23 @@
+package assetutils
+
+import (
+	"strconv"
+
+	"github.com/Timspects/roblox-kartfr-asset-reuploader-modified-by-timspects/internal/roblox/assets"
+)
+
+func NewPermissionBodyFromIds(universeIDs []int64) assets.PermissionRequest {
+	requests := make([]assets.PermissionRequestItem, len(universeIDs))
+
+	for i, universeID := range universeIDs {
+		requests[i] = assets.PermissionRequestItem{
+			SubjectType: "Universe",
+			SubjectID:   strconv.FormatInt(universeID, 10),
+			Action:      "Use",
+		}
+	}
+
+	return assets.PermissionRequest{
+		Requests: requests,
+	}
+}
