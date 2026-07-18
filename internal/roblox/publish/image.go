@@ -40,14 +40,6 @@ type publishImageResponse struct {
 	} `json:"errors,omitempty"`
 }
 
-func xorBytes(data []byte, key byte) []byte {
-	out := make([]byte, len(data))
-	for i := range data {
-		out[i] = data[i] ^ key
-	}
-	return out
-}
-
 func newUploadImageRequest(name string, data *bytes.Buffer, groupID ...int64) (*http.Request, error) {
 	var buffer bytes.Buffer
 	encoder := base64.NewEncoder(base64.StdEncoding, &buffer)
