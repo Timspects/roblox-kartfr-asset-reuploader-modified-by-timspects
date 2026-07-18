@@ -46,6 +46,10 @@ func main() {
 	ensureAPIKey()
 
 	fmt.Println("localhost started on port " + port + ". Waiting to start reuploading.")
+
+	if err := serve(c); err != nil {
+		log.Fatal(err)
+	}
 }
 
 func getCookie(c *roblox.Client) {
