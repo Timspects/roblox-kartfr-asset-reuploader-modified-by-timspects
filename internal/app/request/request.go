@@ -8,7 +8,7 @@ import (
 type RawRequest struct {
 	PlaceID         int64   `json:"placeId"`
 	CreatorID       int64   `json:"creatorId"`
-	IDs             []int64 `json:"ids,string"`
+	IDs             []int64 `json:"ids"`
 	DefaultPlaceIDs []int64 `json:"defaultPlaceIds"`
 	PluginVersion   string  `json:"pluginVersion"`
 	AssetType       string  `json:"assetType"`
