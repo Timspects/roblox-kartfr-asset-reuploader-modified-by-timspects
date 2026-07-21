@@ -25,7 +25,7 @@ import (
 	"github.com/Timspects/roblox-kartfr-asset-reuploader-modified-by-timspects/internal/taskqueue"
 )
 
-const assetTypeID int32 = 24
+const assetTypeID int32 = 1
 const imageUploadRetryTries = 3
 const imageUploadRateLimitMaxPower = 6
 
@@ -392,3 +392,4 @@ func Reupload(ctx *context.Context, r *request.Request) {
 	}
 	wg.Wait()
 }
+
